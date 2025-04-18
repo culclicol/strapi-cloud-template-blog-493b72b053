@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_company_details",
+  "info": {
+    "singularName": "about-us-company-detail",
+    "pluralName": "about-us-company-details",
+    "displayName": "2. About Us - Company Detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "main": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "highlight": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

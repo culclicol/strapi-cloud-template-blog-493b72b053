@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "6. Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "string"
+    },
+    "email_sub": {
+      "type": "string"
+    },
+    "address_name": {
+      "type": "string"
+    },
+    "address_link": {
+      "type": "string"
+    },
+    "facebook_link": {
+      "type": "string"
+    },
+    "youtube_link": {
+      "type": "string"
+    },
+    "instagram_link": {
+      "type": "string"
+    },
+    "tiktok_link": {
+      "type": "string"
+    }
+  }
+}

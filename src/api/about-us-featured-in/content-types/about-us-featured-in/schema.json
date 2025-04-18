@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_us_featured_ins",
+  "info": {
+    "singularName": "about-us-featured-in",
+    "pluralName": "about-us-featured-ins",
+    "displayName": "2. About Us - Featured In"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "url": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

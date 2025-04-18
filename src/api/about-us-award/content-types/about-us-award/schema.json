@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_us_awards",
+  "info": {
+    "singularName": "about-us-award",
+    "pluralName": "about-us-awards",
+    "displayName": "2. About Us - Award"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "url": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "year": {
+      "type": "date"
+    }
+  }
+}

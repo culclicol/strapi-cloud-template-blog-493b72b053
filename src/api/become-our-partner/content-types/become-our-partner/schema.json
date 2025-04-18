@@ -1,0 +1,17 @@
+{
+  "kind": "singleType",
+  "collectionName": "become_our_partners",
+  "info": {
+    "singularName": "become-our-partner",
+    "pluralName": "become-our-partners",
+    "displayName": "Become Our Partner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    }
+  }
+}
