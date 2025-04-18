@@ -694,7 +694,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
 }
 
 export interface ApiHomepageCarouselHomepageCarousel
-  extends Struct.SingleTypeSchema {
+  extends Struct.CollectionTypeSchema {
   collectionName: 'homepage_carousels';
   info: {
     description: '';
@@ -714,22 +714,21 @@ export interface ApiHomepageCarouselHomepageCarousel
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    images: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    images: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::homepage-carousel.homepage-carousel'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String &
+    title: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -848,6 +847,45 @@ export interface ApiHomepagePartnerHomepagePartner
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface ApiHomepageTagLineHomepageTagLine
+  extends Struct.SingleTypeSchema {
+  collectionName: 'homepage_tag_lines';
+  info: {
+    description: '';
+    displayName: '1. Homepage - Tag Line';
+    pluralName: 'homepage-tag-lines';
+    singularName: 'homepage-tag-line';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage-tag-line.homepage-tag-line'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1555,6 +1593,7 @@ declare module '@strapi/strapi' {
       'api::homepage-carousel.homepage-carousel': ApiHomepageCarouselHomepageCarousel;
       'api::homepage-our-story.homepage-our-story': ApiHomepageOurStoryHomepageOurStory;
       'api::homepage-partner.homepage-partner': ApiHomepagePartnerHomepagePartner;
+      'api::homepage-tag-line.homepage-tag-line': ApiHomepageTagLineHomepageTagLine;
       'api::project.project': ApiProjectProject;
       'api::the-library.the-library': ApiTheLibraryTheLibrary;
       'api::the-people.the-people': ApiThePeopleThePeople;

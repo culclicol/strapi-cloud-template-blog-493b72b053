@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage_tag_lines",
+  "info": {
+    "singularName": "homepage-tag-line",
+    "pluralName": "homepage-tag-lines",
+    "displayName": "1. Homepage - Tag Line",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

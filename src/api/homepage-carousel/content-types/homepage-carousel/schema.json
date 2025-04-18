@@ -1,5 +1,5 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "homepage_carousels",
   "info": {
     "singularName": "homepage-carousel",
@@ -18,27 +18,33 @@
   "attributes": {
     "images": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
+      ]
+    },
+    "title": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "title": {
-      "type": "string",
+    "description": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "date": {
+      "type": "date"
     }
   }
 }
