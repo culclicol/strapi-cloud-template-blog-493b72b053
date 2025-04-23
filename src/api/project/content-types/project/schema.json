@@ -85,6 +85,9 @@
     },
     "end_date": {
       "type": "date"
+    },
+    "call_for_collaborator": {
+      "type": "boolean"
     }
   }
 }

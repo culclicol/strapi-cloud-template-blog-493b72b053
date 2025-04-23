@@ -889,6 +889,37 @@ export interface ApiHomepageTagLineHomepageTagLine
   };
 }
 
+export interface ApiMaintenanceModeMaintenanceMode
+  extends Struct.SingleTypeSchema {
+  collectionName: 'maintenance_modes';
+  info: {
+    description: '';
+    displayName: 'Maintenance Mode';
+    pluralName: 'maintenance-modes';
+    singularName: 'maintenance-mode';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    allow_path: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::maintenance-mode.maintenance-mode'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    trigger: Schema.Attribute.Boolean;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   collectionName: 'projects';
   info: {
@@ -907,6 +938,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
+    call_for_collaborator: Schema.Attribute.Boolean;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1594,6 +1626,7 @@ declare module '@strapi/strapi' {
       'api::homepage-our-story.homepage-our-story': ApiHomepageOurStoryHomepageOurStory;
       'api::homepage-partner.homepage-partner': ApiHomepagePartnerHomepagePartner;
       'api::homepage-tag-line.homepage-tag-line': ApiHomepageTagLineHomepageTagLine;
+      'api::maintenance-mode.maintenance-mode': ApiMaintenanceModeMaintenanceMode;
       'api::project.project': ApiProjectProject;
       'api::the-library.the-library': ApiTheLibraryTheLibrary;
       'api::the-people.the-people': ApiThePeopleThePeople;
