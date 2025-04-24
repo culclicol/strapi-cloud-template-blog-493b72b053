@@ -86,8 +86,11 @@
     "end_date": {
       "type": "date"
     },
-    "call_for_collaborator": {
+    "open_call": {
       "type": "boolean"
+    },
+    "external_link": {
+      "type": "string"
     }
   }
 }
