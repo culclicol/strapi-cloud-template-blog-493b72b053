@@ -937,8 +937,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
-    call_for_collaborator: Schema.Attribute.Boolean;
+    author: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::the-people.the-people'
+    >;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -951,6 +953,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       }>;
     end_date: Schema.Attribute.Date;
     end_time: Schema.Attribute.Time;
+    external_link: Schema.Attribute.String;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -966,6 +969,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    open_call: Schema.Attribute.Boolean;
     project_type: Schema.Attribute.Enumeration<['workshop', 'exhibition']>;
     publishedAt: Schema.Attribute.DateTime;
     start_date: Schema.Attribute.Date;

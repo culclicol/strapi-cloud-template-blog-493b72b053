@@ -55,8 +55,8 @@
     },
     "author": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::author.author"
+      "relation": "oneToMany",
+      "target": "api::the-people.the-people"
     },
     "start_date": {
       "type": "date"
@@ -86,8 +86,11 @@
     "end_date": {
       "type": "date"
     },
-    "call_for_collaborator": {
+    "open_call": {
       "type": "boolean"
+    },
+    "external_link": {
+      "type": "string"
     }
   }
 }
