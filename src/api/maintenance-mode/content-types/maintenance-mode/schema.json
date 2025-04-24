@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "maintenance_modes",
+  "info": {
+    "singularName": "maintenance-mode",
+    "pluralName": "maintenance-modes",
+    "displayName": "Maintenance Mode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "trigger": {
+      "type": "boolean"
+    },
+    "allow_path": {
+      "type": "string"
+    }
+  }
+}
