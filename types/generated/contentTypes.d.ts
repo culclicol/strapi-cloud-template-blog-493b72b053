@@ -937,7 +937,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
+    authors: Schema.Attribute.Relation<'oneToMany', 'api::author.author'>;
     call_for_collaborator: Schema.Attribute.Boolean;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
