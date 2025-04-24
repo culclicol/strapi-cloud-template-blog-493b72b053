@@ -53,10 +53,10 @@
         "exhibition"
       ]
     },
-    "authors": {
+    "author": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::author.author"
+      "target": "api::the-people.the-people"
     },
     "start_date": {
       "type": "date"

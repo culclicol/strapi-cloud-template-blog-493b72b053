@@ -937,7 +937,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    authors: Schema.Attribute.Relation<'oneToMany', 'api::author.author'>;
+    author: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::the-people.the-people'
+    >;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
