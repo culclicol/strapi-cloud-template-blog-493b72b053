@@ -811,9 +811,10 @@ export interface ApiHomepageOurStoryHomepageOurStory
 }
 
 export interface ApiHomepagePartnerHomepagePartner
-  extends Struct.SingleTypeSchema {
+  extends Struct.CollectionTypeSchema {
   collectionName: 'homepage_partners';
   info: {
+    description: '';
     displayName: '1. Homepage - Partner';
     pluralName: 'homepage-partners';
     singularName: 'homepage-partner';
@@ -1008,6 +1009,7 @@ export interface ApiTheLibraryTheLibrary extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     description: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1019,6 +1021,7 @@ export interface ApiTheLibraryTheLibrary extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::the-library.the-library'
     >;
+    location: Schema.Attribute.String;
     markdown: Schema.Attribute.RichText &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1083,7 +1086,7 @@ export interface ApiThePeopleThePeople extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    occupation: Schema.Attribute.String &
+    occupation: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
