@@ -762,7 +762,7 @@ export interface ApiHomepageOurStoryHomepageOurStory
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date;
-    description: Schema.Attribute.String &
+    description: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -792,18 +792,6 @@ export interface ApiHomepageOurStoryHomepageOurStory
       'api::homepage-our-story.homepage-our-story'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    quote: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    quote_author: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

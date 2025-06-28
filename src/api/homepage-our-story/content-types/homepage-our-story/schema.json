@@ -41,7 +41,7 @@
       }
     },
     "description": {
-      "type": "string",
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -58,22 +58,6 @@
     },
     "date": {
       "type": "date"
-    },
-    "quote": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "quote_author": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     }
   }
 }
