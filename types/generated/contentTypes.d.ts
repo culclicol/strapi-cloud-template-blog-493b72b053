@@ -1087,7 +1087,9 @@ export interface ApiThePeopleThePeople extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     social_link: Schema.Attribute.String;
     social_tag: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['artist', 'activist']>;
+    type: Schema.Attribute.Enumeration<
+      ['artist', 'entrepreneur', 'organizer', 'activist']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

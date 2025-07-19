@@ -80,6 +80,8 @@
       "type": "enumeration",
       "enum": [
         "artist",
+        "entrepreneur",
+        "organizer",
         "activist"
       ]
     }
