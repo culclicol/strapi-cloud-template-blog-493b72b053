@@ -448,7 +448,7 @@ export interface ApiAboutUsCompanyDetailAboutUsCompanyDetail
       'oneToMany',
       'api::about-us-company-detail.about-us-company-detail'
     >;
-    main: Schema.Attribute.String &
+    main: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
