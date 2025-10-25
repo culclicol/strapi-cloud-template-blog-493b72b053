@@ -958,6 +958,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    location_link: Schema.Attribute.String;
     open_call: Schema.Attribute.Boolean;
     project_type: Schema.Attribute.Enumeration<['workshop', 'exhibition']>;
     publishedAt: Schema.Attribute.DateTime;
