@@ -91,6 +91,9 @@
     },
     "external_link": {
       "type": "string"
+    },
+    "location_link": {
+      "type": "string"
     }
   }
 }
