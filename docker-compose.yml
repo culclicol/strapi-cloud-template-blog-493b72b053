@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  strapi:
+    build: .
+    image: ccc_strapi_app:latest
+    restart: unless-stopped
+    environment:
+      DATABASE_CLIENT: sqlite
+      DATABASE_FILENAME: .tmp/data.db
+      APP_KEYS: ${APP_KEYS}
+      API_TOKEN_SALT: ${API_TOKEN_SALT}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      JWT_SECRET: ${JWT_SECRET}
+      NODE_ENV: production
+      PORT: 1337
+    ports:
+      - "1337:1337"
+    volumes:
+      - ./public/uploads:/srv/app/public/uploads
+      - ./data:/srv/app/data
+      - ./.tmp:/srv/app/.tmp
